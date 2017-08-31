@@ -1,15 +1,15 @@
 import React from 'react';
-
+// <p>
+//   {description}
+// </p>
 const VideoItem = ({ video }) => {
   const { title, description, thumbnails } = video.snippet;
   return (
     <div>
-      <h4>
+      <h6>
         {title}
-      </h4>
-      <p>
-        {description}
-      </p>
+      </h6>
+
       <img src={thumbnails.default.url} />
     </div>
   );

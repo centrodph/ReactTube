@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { searchVideos } from '../actions/index';
+import { searchVideos, newSearchTerm } from '../actions/index';
 
 /**
  * SearchBar
@@ -20,6 +20,7 @@ class SearchBar extends Component {
    */
   submitHandler(event) {
     event.preventDefault();
+    this.props.newSearchTerm(this.state.search);
     this.props.searchVideos(this.state.search);
   }
   /**
@@ -51,7 +52,7 @@ class SearchBar extends Component {
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ searchVideos }, dispatch);
+  return bindActionCreators({ searchVideos, newSearchTerm }, dispatch);
 }
 
 export default connect(null, mapDispatchToProps)(SearchBar);
