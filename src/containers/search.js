@@ -40,13 +40,22 @@ class SearchBar extends Component {
    */
   render() {
     return (
-      <form onSubmit={this.submitHandler.bind(this)}>
-        <input
-          value={this.state.search}
-          onChange={this.inputHandler.bind(this)}
-        />
-        <button>Search</button>
-      </form>
+      <div className="container">
+        <form onSubmit={this.submitHandler.bind(this)}>
+          <div className="row">
+            <div className="col s10">
+              <input
+                value={this.state.search}
+                onChange={this.inputHandler.bind(this)}
+                placeholder="Search for your favorites videos"
+              />
+            </div>
+            <div className="col s2">
+              <button className="btn waves-effect waves-light">Search</button>
+            </div>
+          </div>
+        </form>
+      </div>
     );
   }
 }

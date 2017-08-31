@@ -3,13 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1",
-    "react-scripts": "1.0.12",
     "axios": "^0.16.2",
     "lodash": "^3.10.1",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-player": "^0.20.0",
     "react-redux": "4.3.0",
     "react-router": "^2.0.1",
+    "react-scripts": "1.0.12",
     "redux": "^3.0.4",
     "redux-promise": "^0.5.3"
   },
