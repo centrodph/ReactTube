@@ -9,8 +9,10 @@ const VideoItem = ({ video }) => {
       <h6>
         {title}
       </h6>
-
-      <img src={thumbnails.default.url} />
+      <p>
+        {description}
+      </p>
+      <img alt={title} src={thumbnails.default.url} />
     </div>
   );
 };

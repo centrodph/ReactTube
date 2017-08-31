@@ -3,10 +3,9 @@ export default function(state = [], action) {
   switch (action.type) {
     case SEARCH_VIDEOS:
       return action.payload.data.items;
-      break;
     case LOADMORE_VIDEOS:
       return [...state, ...action.payload.data.items];
-      break;
+    default:
   }
   return state;
 }

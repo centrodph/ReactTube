@@ -3,9 +3,6 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { loadMoreVideos } from '../actions';
 class LoadMoreVideos extends Component {
-  constructor(props) {
-    super(props);
-  }
   loadMoreHandler(event) {
     event.preventDefault();
     this.props.loadMoreVideos(

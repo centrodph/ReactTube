@@ -3,9 +3,6 @@ import { connect } from 'react-redux';
 import VideoItem from '../components/video_item';
 
 class VideoList extends Component {
-  constructor(props) {
-    super(props);
-  }
   renderList() {
     return this.props.videos.map(video => {
       return <VideoItem key={video.id.videoId} video={video} />;
@@ -19,7 +16,7 @@ class VideoList extends Component {
     );
   }
 }
-function mapDispatchToProps(dispatch) {}
+//function mapDispatchToProps(dispatch) {}
 function mapStateToProps(state) {
   return { videos: state.videoList };
 }

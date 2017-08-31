@@ -5,7 +5,7 @@ export default function(state = null, action) {
     case SEARCH_VIDEOS:
     case LOADMORE_VIDEOS:
       return action.payload.data.nextPageToken;
-      break;
+    default:
   }
   return state;
 }
