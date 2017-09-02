@@ -11,7 +11,17 @@ class LoadMoreVideos extends Component {
     );
   }
   render() {
-    return <button onClick={this.loadMoreHandler.bind(this)}>Load More</button>;
+    if (!this.props.nextPageToken) {
+      return null;
+    }
+    return (
+      <button
+        onClick={this.loadMoreHandler.bind(this)}
+        className="btn halfway-fab waves-effect waves-light red"
+      >
+        Load More
+      </button>
+    );
   }
 }
 function mapDispatchToProps(dispatch) {

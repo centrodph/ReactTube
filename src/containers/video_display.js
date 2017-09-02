@@ -3,13 +3,20 @@ import { connect } from 'react-redux';
 import ReactPlayer from 'react-player';
 
 class VideoDisplay extends Component {
+  getYoutubeURL() {
+    let videoId = 'kJQP7kiw5Fk'; //default
+    if (this.props.selectedVideo) {
+      videoId = this.props.selectedVideo.id.videoId;
+    }
+    return `https://www.youtube.com/watch?v=${videoId}`;
+  }
   render() {
     return (
       <div className="video-display">
         <ReactPlayer
           width="100%"
           controls={true}
-          url="https://www.youtube.com/watch?v=ysz5S6PUM-U"
+          url={this.getYoutubeURL()}
           playing
         />
       </div>
@@ -17,6 +24,6 @@ class VideoDisplay extends Component {
   }
 }
 function mapStateToProps(state) {
-  return { currentvideo: state.currentvideo };
+  return { selectedVideo: state.selectedVideo };
 }
 export default connect(mapStateToProps, null)(VideoDisplay);

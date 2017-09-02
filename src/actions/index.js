@@ -1,10 +1,17 @@
 import axios from 'axios';
+export const SELECTED_VIDEO = 'SELECTED_VIDEO';
 export const NEWSEARCH_TERM = 'NEWSEARCH_TERM';
 export const SEARCH_VIDEOS = 'SEARCH_VIDEOS';
 export const LOADMORE_VIDEOS = 'LOADMORE_VIDEOS';
 const YT_URL = 'https://www.googleapis.com/youtube/v3/search';
 const YT_KEY = 'AIzaSyCOlLwYLUw3POTv23jvkbZOTQlnKK-O77Y';
 
+export function selectVideo(video) {
+  return {
+    type: SELECTED_VIDEO,
+    payload: video
+  };
+}
 export function newSearchTerm(searchTerm) {
   return {
     type: NEWSEARCH_TERM,

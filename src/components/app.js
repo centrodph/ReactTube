@@ -16,14 +16,15 @@ const App = () => {
       </nav>
       <br />
       <SearchBar />
-
-      <div className="row">
-        <div className="col m9">
-          <VideoDisplay />
-        </div>
-        <div className="col m3">
-          <VideoList />
-          <LoadMoreVideos />
+      <div className="container">
+        <div className="row">
+          <div className="col m9">
+            <VideoDisplay />
+          </div>
+          <div className="col m3">
+            <VideoList />
+            <LoadMoreVideos />
+          </div>
         </div>
       </div>
     </div>
